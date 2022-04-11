@@ -1,0 +1,57 @@
+{
+    "N": {
+        "fmt": "%04d",
+        "base": 1,
+        "ABB": "N"
+    },
+    "rate": {
+        "fmt": "%03d",
+        "base": 0.01,
+        "ABB": "R"
+    },
+    "gmax_exc": {
+        "fmt": "%03d",
+        "base": 0.1,
+        "ABB": "GE"
+    },
+    "gmax_inh": {
+        "fmt": "%03d",
+        "base": 0.1,
+        "ABB": "GI"
+    },
+    "beta": {
+        "fmt": "%03d",
+        "base": 0.01,
+        "ABB": "B"
+    },
+    "alpha": {
+        "fmt": "%03d",
+        "base": 0.01,
+        "ABB": "A"
+    },
+    "p_connection": {
+        "fmt": "%03d",
+        "base": 0.01,
+        "ABB": "CP"
+    },
+    "w0": {
+        "fmt": "%03d",
+        "base": 0.01,
+        "ABB": "W"
+    },
+    "delta_estdp": {
+        "fmt": "%03d",
+        "base": 0.001,
+        "ABB": "DE"
+    },
+    "delta_istdp": {
+        "fmt": "%03d",
+        "base": 0.001,
+        "ABB": "DI"
+    },
+    "delta_U": {
+        "fmt": "%03d",
+        "base": 0.01,
+        "ABB": "DU"
+    }
+}

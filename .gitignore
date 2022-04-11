@@ -1,0 +1,7 @@
+*.pyc
+*.c
+*.so
+exp_setting_*.json
+*.txt
+build
+output

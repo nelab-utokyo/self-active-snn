@@ -1,0 +1,28 @@
+
+{
+    "N": 100,
+    "inhibitory_ratio": 0.20,
+
+    "tau": 30,
+    "ref_period_exp": 3, "ref_period_inh": 2,
+    "rate": 0.40,
+    "v_th": -54, "v_rest": -74, "v_reset": -74,
+
+    "E_exc": 0, "E_inh": -80,
+    "tau_ampa": 2, "tau_gaba": 4,
+    "delay_EE": 1.50, "delay_other": 0.80,
+    "w0": 0.00,
+    "gmax_exc": 4.00, "gmax_inh": 4.00,
+    "p_connection": 1.00,
+
+    "U": 0.40, "delta_U": 0.40,
+    "tau_rec": 150,
+
+    "beta": 1.00,
+    "tau_estdp": 20,
+    "delta_estdp": 0.020000,
+
+    "alpha": 1.15,
+    "tau_1": 10, "tau_2": 20,
+    "delta_istdp": 0.020000
+}

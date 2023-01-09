@@ -129,6 +129,7 @@ def low_pass_filter(spikes_i, spikes_t, N, runtime, tau=0.03):
     trace_v = voltage[:, :l_runtime]
     return trace_v, trace_t
 
+"""
 def linear_regression(x, y, x_lreg):
     y_emp = np.zeros((x_lreg.shape[0], 1))
     for i, v in enumerate(x_lreg[:, 0]):
@@ -155,4 +156,24 @@ def linear_regression(x, y, x_lreg):
             range_best = [1, i]
             min_error = error
     return y_emp, y_best, range_best
+"""
 
+def linear_regression(x, y, x_lreg):
+    y_emp = np.zeros((x_lreg.shape[0], 1))
+    for i, v in enumerate(x_lreg[:, 0]):
+        if v in x:
+        y_emp[i, 0] = y[np.where(x==v)[0][0]]
+    min_error = np.inf
+    clf = linear_model.LinearRegression()
+    y_best = None
+    range_best = None
+    for i in range(6, len(x)):
+        clf.fit(x[1:i], y[1:i])
+        indices = np.where((x_lreg>0)&(x_lreg<=x[i-1]))[0]
+        y_lreg = clf.predict(x_lreg[indices])
+        error = np.mean(np.square(y_lreg-y_emp[indices]))
+        if error <= min_error:
+            y_best = clf.predict(x_lreg)
+            range_best = [1, i]
+            min_error = error
+    return y_emp, y_best, range_best

@@ -53,10 +53,10 @@ if [ ! -e $FIGNAME_S ]
 then
     python plot_development.py $OUTFILE_S -o $FIGNAME_S
 fi
-if [ ! -e $FIGNAME_I ]
-then
-    python plot_indices.py $OUTFILE_I -o $FIGNAME_I
-fi
+# if [ ! -e $FIGNAME_I ]
+# then
+#     python plot_indices.py $OUTFILE_I -o $FIGNAME_I
+# fi
 
 #for S_FILE in ${S_FILES[@]}
 #do

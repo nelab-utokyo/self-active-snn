@@ -225,7 +225,7 @@ class mySNN():
         self.G.v = states['v']*mV
         self.G.x = states['x']
         self.G.gtot_exc = states['gtot_exc']
-        self.G.gtot_inh = states['gtot_exc']
+        self.G.gtot_inh = states['gtot_inh']
         for d, S in zip(directions, (self.S_EE, self.S_EI, self.S_IE, self.S_II)):
             W = states['w_'+d]
             sources, targets = np.where(np.isnan(W)==False)
